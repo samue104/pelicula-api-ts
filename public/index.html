@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CineBox — Películas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">🎬 CineBox</div>
+    <nav class="sidebar-nav">
+      <div class="nav-item activo" data-seccion="populares">🔥 Populares</div>
+      <div class="nav-item" data-seccion="top-rated">⭐ Top Rated</div>
+      <div class="nav-item" data-seccion="proximos">🎞️ Próximos Estrenos</div>
+      <div class="nav-item" data-seccion="en-cines">🍿 Ahora en Cines</div>
+      <div class="nav-item" data-seccion="favoritos">❤️ Mis Favoritos</div>
+    </nav>
+    <div class="sidebar-busqueda">
+      <input type="text" id="input-busqueda" placeholder="Buscar película..." />
+      <button id="btn-buscar">Buscar</button>
+    </div>
+  </aside>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="main-content">
+
+    <!-- Populares -->
+    <section id="seccion-populares" class="seccion activa">
+      <h2 class="seccion-titulo">🔥 Películas Populares</h2>
+      <div id="lista-populares" class="movie-grid"></div>
+    </section>
+
+    <!-- Top Rated -->
+    <section id="seccion-top-rated" class="seccion">
+      <h2 class="seccion-titulo">⭐ Mejor Valoradas</h2>
+      <div id="lista-top-rated" class="movie-grid"></div>
+    </section>
+
+    <!-- Próximos Estrenos -->
+    <section id="seccion-proximos" class="seccion">
+      <h2 class="seccion-titulo">🎞️ Próximos Estrenos</h2>
+      <div id="lista-proximos" class="movie-grid"></div>
+    </section>
+
+    <!-- Ahora en Cines -->
+    <section id="seccion-en-cines" class="seccion">
+      <h2 class="seccion-titulo">🍿 Ahora en Cines</h2>
+      <div id="lista-en-cines" class="movie-grid"></div>
+    </section>
+
+    <!-- Mis Favoritos -->
+    <section id="seccion-favoritos" class="seccion">
+      <h2 class="seccion-titulo">❤️ Mis Favoritos</h2>
+      <div id="lista-favoritos" class="movie-grid"></div>
+    </section>
+
+    <!-- Resultados de búsqueda -->
+    <section id="seccion-busqueda" class="seccion">
+      <h2 class="seccion-titulo">🔍 Resultados de búsqueda</h2>
+      <div id="resultados-busqueda" class="movie-grid"></div>
+    </section>
+
+  </main>
+
+  <!-- MODAL DE DETALLE -->
+  <div id="modal" class="modal-overlay">
+    <div id="modal-contenido" class="modal-caja"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
